@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>اختيار المادة</title>
+  <style>
+    body {
+      font-family: "Tajawal", Arial, sans-serif;
+      background: linear-gradient(to right, #74ebd5, #9face6);
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    h2 {
+      margin-top: 60px;
+      font-size: 28px;
+      color: #333;
+    }
+
+    select {
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      margin-top: 20px;
+      width: 200px;
+    }
+
+    button {
+      margin-top: 30px;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>✨ اختاري المادة ✨</h2>
+
+  <select id="subject">
+    <option value="">-- اختر المادة --</option>
+    <option value="https://notebooklm.google.com/notebook/6f1b1ece-ce92-4142-897b-c305ead8d64a?authuser=1">Hcm 101</option>
+    <option value="https://notebooklm.google.com/notebook/c1b4d2d0-8083-4623-a503-d0854708af2e?authuser=1">HCM 113</option>
+    <option value="https://notebooklm.google.com/notebook/e9155e35-b362-49e7-b5c4-7526b3437050?authuser=1">PHC 131</option>
+  </select>
+
+  <br><br>
+
+  <button onclick="goToLink()">اذهب للرابط 🚀</button>
+
+  <script>
+    function goToLink() {
+      var link = document.getElementById("subject").value;
+      if (link) {
+        window.location.href = link;  
+      } else {
+        alert("الرجاء اختيار مادة أولاً");
+      }
+    }
+  </script>
+
+</body>
+</html>
